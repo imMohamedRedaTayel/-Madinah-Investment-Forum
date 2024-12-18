@@ -10,9 +10,14 @@ import "./style.scss";
 
 import Word from "../../methode/index";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Activities() {
   const { t } = useTranslation();
+  
+  // Main list of activities
   const listMain = [
     {
       title: "ActivitiesText1",
@@ -36,6 +41,7 @@ export default function Activities() {
     },
   ];
 
+  // Sub list of activities
   const listsub = [
     {
       title: "ActivitiesText9",
@@ -58,43 +64,64 @@ export default function Activities() {
       imaf_url: img8,
     },
   ];
+
+  // Initialize AOS when the component mounts
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+    });
+  }, []);
+
   return (
     <div className="Activities" id="activities">
       <div className="container">
-        {" "}
-        <h5>
+        <h5 data-aos="fade-up">
           <Word v="ActivitiesText17" />
         </h5>
-        <h2 className="mb-4">
-          <Word v="ActivitiesText18" />{" "}
+        <h2 className="mb-4" data-aos="fade-up" data-aos-delay="200">
+          <Word v="ActivitiesText18" />
         </h2>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="400">
           <Word v="ActivitiesText19" />
         </p>
-        <h5 className="type-title">
+
+        <h5 className="type-title" data-aos="fade-up" data-aos-delay="600">
           <span></span> <Word v="ActivitiesText20" />
           <span></span>
         </h5>
+
         <div className="list row">
-          {listMain.map((item) => (
-            <div className="col-md-3" key={item}>
+          {listMain.map((item, index) => (
+            <div
+              className="col-md-3"
+              key={item.imaf_url}
+              data-aos="fade-up"
+              data-aos-delay={index * 200} // Stagger the animation delay
+            >
               <div className="content">
-                <img src={item.imaf_url} />
+                <img src={item.imaf_url} alt={t(item.title)} />
                 <h5>{t(item.title)}</h5>
                 <p>{t(item.parg)}</p>
               </div>
             </div>
           ))}
-        </div>{" "}
-        <h5 className="type-title">
+        </div>
+
+        <h5 className="type-title" data-aos="fade-up" data-aos-delay="800">
           <span></span>
           {t("Accompanyingevents")} <span></span>
         </h5>
+
         <div className="list row">
-          {listsub.map((item) => (
-            <div className="col-md-3" key={item}>
+          {listsub.map((item, index) => (
+            <div
+              className="col-md-3"
+              key={item.imaf_url}
+              data-aos="fade-up"
+              data-aos-delay={index * 200} // Stagger the animation delay
+            >
               <div className="content">
-                <img src={item.imaf_url} />
+                <img src={item.imaf_url} alt={t(item.title)} />
                 <h5>{t(item.title)}</h5>
                 <p>{t(item.parg)}</p>
               </div>

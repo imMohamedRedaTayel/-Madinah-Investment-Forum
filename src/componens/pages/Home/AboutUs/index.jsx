@@ -9,7 +9,7 @@ export function AboutUs() {
     <div className="aboutus" id="about-us">
       <div className="container">
         {" "}
-        <div className="row">
+        <div className="row" >
           <div className="img-about col-md-6">
             <div className="about-img">
               <img

@@ -1,24 +1,29 @@
 import { NavLink } from "react-router-dom";
 import "./style.scss";
-
+import { useEffect } from "react";
 import Word from "../../methode/index";
 import { useSelector } from "react-redux";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function SessionCon() {
   const Sessions = useSelector((state) => state.SessionList);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, 
+    });
+  }, []);
   return (
     <div className="SessionCon" id="discussion-sessions">
       {" "}
       <div className="container">
         {" "}
-        <h5>
+        <h5 data-aos="fade-up">
           <Word v="SessionsTitle" />
         </h5>
-        <h2 className="mb-4">
+        <h2 className="mb-4"  data-aos="fade-up" data-aos-delay="200">
           <Word v="SessionsText1" />{" "}
         </h2>
-        <p>
+        <p  data-aos="fade-up" data-aos-delay="400">
           <Word v="SessionsText2" />
         </p>
       </div>

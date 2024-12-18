@@ -9,84 +9,44 @@ import img8 from "../../../../assets/images/Objectives/verify.svg";
 import "./style.scss";
 
 import Word from "../../methode/index";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Objectives() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+
+    });
+  }, []);
+
   return (
     <div className="Objectives" id="Objectives">
       <div className="container">
-        {" "}
-        {/* <h5>الاستثمار في المستقبل يبدأ من هنا</h5> */}
-        <h2 className="mb-4">
+        <h2 className="mb-4" data-aos="fade-up">
           <Word v="ObjectivesTitle" />
         </h2>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           <Word v="ObjectivesText1" />
         </p>
         <div className="list row">
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img1} />
-              <h5>
-                <Word v="ObjectivesText2" />
-              </h5>
+          {/* Objective Items */}
+          {[img1, img2, img3, img4, img5, img6, img7, img8].map((img, index) => (
+            <div
+              key={index}
+              className="col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay={index * 140} 
+            >
+              <div className="content">
+                <img src={img} alt={`Objective-${index}`} />
+                <h5>
+                  <Word v={`ObjectivesText${index + 2}`} />
+                </h5>
+              </div>
             </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img2} />
-              <h5>
-                <Word v="ObjectivesText3" />{" "}
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img3} />
-              <h5>
-                <Word v="ObjectivesText4" />
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img4} />
-              <h5>
-                <Word v="ObjectivesText5" />{" "}
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img5} />
-              <h5>
-                <Word v="ObjectivesText6" />
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img6} />
-              <h5>
-                <Word v="ObjectivesText7" />
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img7} />
-              <h5>
-                <Word v="ObjectivesText8" />
-              </h5>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="content">
-              <img src={img8} />
-              <h5>
-                <Word v="ObjectivesText9" />
-              </h5>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

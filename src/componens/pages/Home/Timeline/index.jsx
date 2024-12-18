@@ -2,12 +2,19 @@ import "./style.scss";
 import arrowGoLeft from "../../../../assets/images/arrowGoLeft.svg";
 import arrowGoRight from "../../../../assets/images/arrowGoRight.svg";
 import { useState } from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import Word from "../../methode/index";
 import { useTranslation } from "react-i18next";
 export default function Timeline() {
   const { t } = useTranslation();
   const [ShowTime, setShowTime] = useState(1);
+    useEffect(() => {
+      AOS.init({
+        duration: 1200, 
+      });
+    }, []);
   const TimeLines = [
     {
       date: "TimeLineText4",
@@ -65,17 +72,17 @@ export default function Timeline() {
     <div className="TimeLine">
       <div className="container">
         {" "}
-        <h5>
+        <h5 data-aos="fade-up">
           <Word v="TimeLineText1" />
         </h5>
-        <h2 className="mb-4">
+        <h2 className="mb-4" data-aos="fade-up" data-aos-delay="200">
           <Word v="TimeLineText2" />
         </h2>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="400">
           <Word v="TimeLineText3" />
         </p>
       </div>
-      <section className="TimeLines">
+      <section className="TimeLines" data-aos="fade-up" data-aos-delay="1000">
         {TimeLines.map((item, index) => (
           <div
             className={`TimeLineSec ${ShowTime != index ? "show" : ""}`}

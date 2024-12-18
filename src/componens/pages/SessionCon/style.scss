@@ -1,0 +1,145 @@
+.SessionConsec {
+  text-align: center;
+  margin: 100px 0px;
+  h5 {
+    color: #5e7f4c;
+  }
+  h2 {
+    color: black;
+  }
+  .row {
+    .image-sec {
+        transition: all 1s ease-out;
+      overflow: hidden;
+      .content {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        .shap {
+          width: 100%;
+          z-index: 99;
+          height: 100%;
+          background: #00000087;
+          color: white;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: start;
+          .info {
+            h5 {
+              color: white;
+            }
+            img {
+              width: 72px;
+              height: 72px;
+            }
+          }
+            p {
+              color: white;
+              font-size: 23px;
+            }
+        }
+      }
+
+    }
+       > div:nth-child(1) .content {
+        background: url("../../../assets/images/sec1.jfif") left top no-repeat
+          fixed;
+    }
+    > div:nth-child(2) .content {
+        background: url("../../../assets/images/sec2.jfif") top left fixed
+          no-repeat;
+    }
+    > div:nth-child(3) .content {
+        background: url("../../../assets/images/sec3.jfif") top left fixed
+          no-repeat;
+    }
+    > div:nth-child(4) .content {
+        background: url("../../../assets/images/sec4.jfif") top left fixed
+          no-repeat;
+    }
+    .content-sec{
+      padding-right: 20px;
+      text-align: right;
+      h3{
+           border-bottom: 3px solid #5E7F4C;
+    width: max-content;
+    padding-bottom: 15px;
+      }
+      ul{
+        display: block;
+        list-style-type:circle;
+        padding-right: 20px;
+        margin: 30px 0px;
+       p{
+         color: #5A5D61;
+         padding: 0px;
+         margin: 0px;
+       }
+      }
+    .speackers_list  >div{
+            display: flex
+;margin-bottom: 20px;
+    align-items: start;
+    gap: 20px;
+      p{
+            padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+      }
+      h5{
+            font-size: 16px;
+            font-weight: 700;
+    color: black;
+      }
+      }
+      img{
+        width: 50%;
+        height: 150px;
+      }
+    .supporters{
+      padding: 0px;
+      
+    }
+    }
+
+  .btn{
+    width: 100%;
+    background: #5e7f4c;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    
+  }    
+  }section{margin-bottom: 100px !important;}
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 992px) {.SessionCon .row:hover {
+  > div  {width: 100% !important; }}
+  .SessionCon .row > div .content{
+    height: auto;
+  }
+}
+
+body[dir="ltr"] {
+.SessionConsec .row .content-sec ul p{
+ text-align: start;
+}
+.SessionConsec .row .content-sec ul{
+  padding-left: 20px;
+  padding-right: 0px;
+}
+.SessionConsec .row .content-sec .speackers_list > div p,.SessionConsec .row .content-sec .speackers_list > div h5{
+  text-align: left;
+}
+}

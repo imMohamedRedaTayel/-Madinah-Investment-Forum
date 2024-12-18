@@ -1,0 +1,160 @@
+
+$boxShadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+.login-form {
+    margin: 50px auto ;
+      width: 90%;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    padding: 30px 30px 10px;
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 25px;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  .row {
+    > div {
+      position: relative;
+      .icon {
+        position: absolute;
+        top: 15px;
+        right: 23px;
+        color: #cda149;
+      }
+      label{
+        color: black;
+        text-align: start;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      input,select {
+        width: 100%;
+        height: 50px;
+        padding-right: 10px;
+        border: 1px solid #c5c5c578;
+        box-shadow: none;
+        text-align: right;
+        &:hover,
+        &:focus,
+        &:active,
+        &:focus-visible,
+        &:focus-within {
+          border: 1px solid black;
+          box-shadow: none;
+          outline: 0px;
+          color: black;
+        }
+      }
+      .eye{
+            position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50px;
+    left: 27px;
+    cursor: pointer;
+      }
+      .hide{display: none;}
+    }
+    .countries_key {
+      background: transparent;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      border: 0px;
+      outline: 0px;
+      box-shadow: none;
+      padding: 0px;
+    }
+  }
+
+  .errorMessage {
+    font-size: small;
+
+    color: rgb(167, 0, 0);
+    display: block;
+    margin: 5px 15px;
+    text-align: start;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    padding: 15px 28px !important;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    font-size: 17px;
+    background: #5e7f4c;
+    box-shadow: $boxShadow;
+    margin: 10px 0px;
+
+  &:hover{
+    color: white;
+    background: #5e7f4c;
+  }
+  }
+  .login-footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    a {
+      color: #cda149;
+      text-decoration: none;
+    }
+  }
+   .newaccount{
+      color: black;
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      a{
+        color: #5e7f4c;
+      }
+    }
+}
+
+@media (max-width: 992px) {
+  .login-form {
+    width: 100%;
+    padding: 15px;
+  }
+  
+}
+.login-form  .row .checkboxInput{ 
+  display: flex;
+  justify-content: space-between;
+  a{
+    color: #5e7f4c;
+  }
+  .content{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        input{
+         width: 20px;
+         height: 20px;
+      }
+      label{
+padding: 0px;
+margin: 0px;
+      }
+    }}
+    body[dir="ltr"] {
+  .login-form .row > div .eye{
+    left:auto;
+    right: 30px;
+  }
+  
+      .login-form  input,select { text-align: left !important;}
+}

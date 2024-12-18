@@ -1,0 +1,45 @@
+.Supporters {
+  text-align: center;
+  margin: 100px 0px;
+  h5 {
+    color: #5e7f4c;
+  }
+  h2 {
+    color: black;
+  }
+
+  .list-sec {
+    .type-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .content{
+      display: grid;
+      justify-content: center;
+    img {
+      animation: moveright 2s ease-out infinite;
+      width: 150px;
+    height: 150px;
+    object-fit: contain;
+        margin: auto;
+    }
+  }
+  }
+}
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 992px) {
+  .Supporters .type-title span {
+    width: 10%;
+  }
+  .list {
+    flex-direction: column;
+  }
+}

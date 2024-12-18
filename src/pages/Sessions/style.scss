@@ -1,0 +1,15 @@
+.Sessions{
+ ul{
+       display: flex;
+       gap:20px;
+       list-style-type: none;
+       padding: 0px;
+       li{
+        color: black;
+        font-size: 20px;
+        a{
+            color:#5A5D61;
+        }
+       }
+ }
+}

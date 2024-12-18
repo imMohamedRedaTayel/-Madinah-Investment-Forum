@@ -1,0 +1,22 @@
+.header-pages {
+  background: url("../../../assets/images/header-sec2.svg") no-repeat center
+    center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 150px 0px 100px;
+  color: white;
+  .shap {
+    background-color: rgba(0, 0, 0, 0.478);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+  }
+ .logoWhite{
+  width: 40%;
+  margin: auto;
+  display: block;
+ }
+}

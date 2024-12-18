@@ -1,0 +1,67 @@
+.Activities {
+  text-align: center;
+  margin: 100px 0px;
+  h5 {
+    color: #5e7f4c;
+  }
+  h2 {
+    color: black;
+  }
+  .row {
+    > div {
+      .content {
+        width: 95%;
+        margin: auto;
+        border-radius: 12px;
+        margin-top: 0px;
+        padding: 20px;   
+         animation: move 3s ease-in infinite;
+ 
+        h5 {
+          margin: 20px 0px 10px 0px;
+          color: black;
+        }
+        img {
+          width: 72px;
+          height: 72px;
+        }
+        p {
+          color: #5a5d61;
+          font-size: 16px;
+        }
+      }
+    }
+ 
+  }
+  .type-title{
+    margin: 50px 0px 30px;
+    span{
+      width: 100px;
+      border: 2px solid #5e7f4c;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0px  10px;
+
+    }
+  } 
+
+}
+@keyframes move{
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translatey(-5px);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+   @media (max-width: 992px) {.Activities .type-title span
+{
+  width: 10%;
+}}

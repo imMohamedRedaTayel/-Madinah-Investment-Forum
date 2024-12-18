@@ -1,0 +1,108 @@
+.Supporters {
+  text-align: center;
+  margin: 100px 0px;
+  h5 {
+    color: #5e7f4c;
+  }
+  h2 {
+    color: black;
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    > div {
+      .content {
+        width: 95%;
+        margin: auto;
+        border-radius: 12px;
+        padding: 5px 20px;
+        animation: moveright ease-out infinite;
+
+        h5 {
+          margin: 20px 0px 10px 0px;
+          color: black;
+        }
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: contain;
+        }
+        p {
+          color: #5a5d61;
+          font-size: 16px;
+        }
+      }
+    }
+    > div:nth-child(1) .content {
+      animation-duration: 1s;
+    }
+    > div:nth-child(2) .content {
+      animation-duration: 1.5s;
+    }
+    > div:nth-child(3) .content {
+      animation-duration: 2s;
+    }
+    > div:nth-child(4) .content {
+      animation-duration: 2.5s;
+    }
+    > div:nth-child(5) .content {
+      animation-duration: 3s;
+    }
+    > div:nth-child(6) .content {
+      animation-duration: 3.5s;
+    }
+    > div:nth-child(7) .content {
+      animation-duration: 4s;
+    }
+    > div:nth-child(8) .content {
+      animation-duration: 4.5s;
+    }
+  }
+  .type-title {
+    margin: 50px 0px 0px;
+    span {
+      width: 10%;
+      border: 2px solid #5e7f4c;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0px 10px;
+    }
+  }
+  .subsec,.top_sec {
+    .type-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    img {
+      animation: moveright 2s ease-out infinite;
+      width: 150px;
+    height: 150px;
+    object-fit: contain;
+    }
+    span {
+      width: 10%;
+      border: 2px solid #5e7f4c;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0px 10px;
+    }
+  }
+}
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 992px) {
+  .Supporters .type-title span {
+    width: 10%;
+  }
+  .list {
+    flex-direction: column;
+  }
+}

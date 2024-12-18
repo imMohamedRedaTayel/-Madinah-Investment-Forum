@@ -1,0 +1,32 @@
+.ScrollTopPages {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100%;
+  background: #5e7f4c;
+  width: 70px;
+  height: 70px;
+  border: 0px;
+  z-index: 999;
+  box-shadow: 0px 0px 7px 2px white;
+  animation: moveright 1s ease-out infinite;
+
+  img {
+    color: white;
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    svg {
+      transform: rotate(0deg);
+    }
+  }
+}
+@keyframes moveright {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

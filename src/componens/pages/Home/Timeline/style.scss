@@ -1,0 +1,130 @@
+.TimeLine {
+  text-align: start;
+  margin: 100px 0px;
+  h5 {
+    color: #5e7f4c !important;
+  }
+  h2 {
+    color: black;
+  }
+  .TimeLines {
+   display: flex;
+   
+    .TimeLineSec{
+    transition: all .2s ease-in-out;
+      width: 1%;
+      padding: 50px 0px;
+      .content{
+        display: none;
+        hr   {
+        height: 5px;
+    background: #5e7f4c;
+    width: 100px;
+    border: 0px;
+    opacity: 1;
+        }
+        ul li .content{
+          
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p{
+        margin: 0px;
+        font-size: 20px;
+      }
+        }
+      .dates-line  {
+              width: 100%;
+    border-top: 1px solid #C1C2C3;
+    position: relative;
+    display: flex
+;
+    justify-content: space-around;
+    margin-top: 46px;
+    list-style: none;
+    padding-top: 10px;
+    li{
+    position: relative;
+    padding-top: 10px;
+      &::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #475f39d4;
+    display: block;
+    border-radius: 100%;
+    margin: auto;
+    position: absolute;
+    top: -15px;
+    left:45%;
+    box-shadow: 0px 0px 17px #00000059;
+      }
+    }
+        }
+        .imgArrow{
+              display: block;
+    margin-right: auto;
+    cursor: pointer;
+        }
+      }
+    }
+    .TimeLineSec:first-child{
+      background: #E7F0F0;
+    }
+    .TimeLineSec:last-child{
+      background: #0C6A69;
+      p,h2,h5,span,div{
+        color:white !important;
+      }
+      .imgArrow{
+        margin-left: auto;
+        margin-right: 0px;
+      }
+    .content .dates-line li::before{background: white;}
+    
+      
+    }
+    .show{      
+    width: 99%;  .content{
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .TimeLine .TimeLines .TimeLineSec .content ul li .content {
+ margin-bottom: 10px;
+     align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+ul{
+  padding: 30px 0px !important;
+  li{
+  padding: 10px 0px !important;
+  p{
+    font-size: 14px !important;
+    width: 60%;
+  }
+  }
+  
+}
+.TimeLine .TimeLines .TimeLineSec .content{
+  max-width: 99% !important;
+}
+.TimeLine .TimeLines .TimeLineSec .content .dates-line{
+  padding: 9px 0px !important;
+}
+}
+body[dir="ltr"] {
+.TimeLine .TimeLines .TimeLineSec:first-child .content .imgArrow {
+   margin-left: auto;
+   margin-right: 0px;
+    transform: rotateY(180deg);
+}
+.TimeLine .TimeLines .TimeLineSec:last-child .imgArrow{
+     margin-left: 0px;
+   margin-right: auto;
+    transform: rotateY(180deg);
+}
+}

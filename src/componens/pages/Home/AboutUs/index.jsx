@@ -16,8 +16,8 @@ export function AboutUs() {
                 className="img-1"
                 src={about1}
                 alt=""
-                {...commonAOS}
-                data-aos-delay="200"
+                // {...commonAOS}
+                // data-aos-delay="200"
               />
             </div>
           </div>

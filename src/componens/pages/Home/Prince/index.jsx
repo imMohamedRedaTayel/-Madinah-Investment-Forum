@@ -19,7 +19,7 @@ export default function Prince() {
       <div className="">
         <div className="row bg-yyy">
           {/* Left Image Section */}
-          <div className="col-md-4" data-aos="fade-right">
+          <div className="col-md-4" data-aos="fade-up">
             <div className="prince-img">
               <img src={prince2} className="" alt="Prince" />
             </div>

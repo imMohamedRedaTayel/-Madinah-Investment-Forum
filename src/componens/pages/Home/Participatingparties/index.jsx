@@ -23,11 +23,18 @@ import logo36 from "../../../../assets/images/logo/036.jpg";
 import logo37 from "../../../../assets/images/logo/037.jpg";
 import logo38 from "../../../../assets/images/logo/038.jpg";
 import log8 from "../../../../assets/images/logo/log8.jfif";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./style.scss";
 import { useTranslation } from "react-i18next";
 export default function Supporters() {
   const {t} = useTranslation();
+    useEffect(() => {
+      AOS.init({
+        duration: 2000, // Animation duration
+      });
+    }, []);
   const Strategic_companies = [
     logo17,
     logo18,
@@ -58,14 +65,14 @@ export default function Supporters() {
     <div className="Supporters" id="Supporters">
       <div className="container">
         {" "}
-        <h5 className="type-title">
+        <h5 className="type-title" data-aos="fade-up" data-aos-delay="200">
           <span></span> {t("ParticipatingEntitiesForum")}
           <span></span>
         </h5>
         <div className="list-sec row">
           {Strategic_companies.map((item) => (
             <div className="col-md-2" key={item}>
-              <div className="content">
+              <div className="content" data-aos="fade-up" data-aos-delay="200">
                 <img src={item} />
               </div>
             </div>

@@ -7,6 +7,7 @@ import Timeline from "../../componens/pages/Home/Timeline";
 import Prince from "../../componens/pages/Home/Prince";
 import SessionCon from "../../componens/pages/Home/SessionCon";
 import Objectives from "../../componens/pages/Home/Objectives";
+import CounNumber from "../../componens/pages/Home/CounNumber";
 import Activities from "../../componens/pages/Home/Activities";
 // import Speakers from "../../componens/pages/Home/Speakers";
 import Participatingparties from "../../componens/pages/Home/Participatingparties";
@@ -24,6 +25,7 @@ export default function Home() {
       <Header />
       <AboutUs />
       <Prince />
+      <CounNumber/>
       <Objectives />
       <SessionCon />
       <Timeline />

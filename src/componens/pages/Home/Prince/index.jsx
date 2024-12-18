@@ -12,15 +12,15 @@ export default function Prince() {
 
   return (
     <div className="Prince">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+      <div className="">
+        <div className="row bg-yyy">
+          <div className="col-md-4">
             {" "}
             <div className="prince-img">
               <img src={prince2} className="" />
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-8 Prince-Text">
             <div className="content">
               {" "}
               <h4 className="mb-4">

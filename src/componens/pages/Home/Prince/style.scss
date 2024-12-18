@@ -2,7 +2,7 @@
   margin-top: 100px;
   position: relative;
   background: #09504F;
-  height: 900px;
+
   .flag {
     opacity: 0.1;
     width: 100%;
@@ -18,7 +18,11 @@
   .row {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+  }
+
+  .Prince-Text {
+
+    padding: 6%;
   }
   .prince-img {
     width: 100%;
@@ -59,5 +63,9 @@
 body[dir="ltr"] {
   .Prince .prince-img img{
 transform:rotateY(0deg);}
+
+.prince-img {
+  text-align: left;
+}
 
 }

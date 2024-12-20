@@ -15,20 +15,22 @@ import Supporters from "../../componens/pages/Home/Supporters";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchSession } from "../../store/actions/session-action";
+import { fetchPartners } from "../../store/actions/parents-action";
 export default function Home() {
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(fetchSession());
+    dispatch(fetchPartners());
   })
   return (
     <div className="Home">
       <Header />
-      <AboutUs />
       <Prince />
-      <CounNumber/>
+      <AboutUs />
+      <CounNumber />
       <Objectives />
-      <SessionCon />
       <Timeline />
+      <SessionCon />
       <Activities />
       {/* <Speakers /> */}
       <Supporters />

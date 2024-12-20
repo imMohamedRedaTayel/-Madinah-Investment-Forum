@@ -28,7 +28,9 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import "./style.scss";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 export default function Supporters() {
+  const Partners = useSelector((state) => state.Partners);
   const {t} = useTranslation();
     useEffect(() => {
       AOS.init({
@@ -70,13 +72,15 @@ export default function Supporters() {
           <span></span>
         </h5>
         <div className="list-sec row">
-          {Strategic_companies.map((item) => (
-            <div className="col-md-2" key={item}>
-              <div className="content" data-aos="fade-up" data-aos-delay="200">
-                <img src={item} />
-              </div>
-            </div>
-          ))}
+          {Partners[2]
+            ? Partners[2].partners.map((Part) => (
+                <div className="col-md-2" key={Part}>
+                  <div className="content">
+                    <img src={Part.image} />
+                  </div>
+                </div>
+              ))
+            : ""}
         </div>
       </div>
     </div>

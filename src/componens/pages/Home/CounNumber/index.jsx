@@ -1,31 +1,37 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./style.scss";
 
+
+
+import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+
 export default function CounNumber() {
+  const { t } = useTranslation();
   const data = [
     {
       id: 1,
       number: 200,
-      title: "الفرص المطروحة",
-      description: "فرصة",
+      title: `${t("CardText1")}`,
+      description: `${t("CardText2")}`,
     },
     {
       id: 2,
       number: 57,
-      title: "قيمة الاستثمار",
-      description: "مليار ريال سعودي",
+      title: `${t("CardText3")}`,
+      description: `${t("CardText4")}`,
     },
     {
       id: 3,
       number: 40,
-      title: "الجهات المشاركة",
-      description: "جهة",
+      title: `${t("CardText5")}`,
+      description: `${t("CardText6")}`,
     },
     {
       id: 4,
       number: 18,
-      title: "عدد المتحدثين",
-      description: "متحدث",
+      title: `${t("CardText7")}`,
+      description: `${t("CardText8")}`,
     },
   ];
 

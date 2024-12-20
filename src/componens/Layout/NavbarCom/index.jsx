@@ -12,7 +12,9 @@ import { getUser, Logout } from "../../../store/actions/auth-action";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSession } from "../../../store/actions/session-action";
+import { fetchPartners } from "../../../store/actions/parents-action";
 export default function NavbarCom() {
+  const [ToggleNav,setToggleNav] = useState(false);
   const dispatch = useDispatch();
    const userInfo = useSelector((state) => state.UserInfo);
    const location = useLocation();
@@ -30,6 +32,7 @@ export default function NavbarCom() {
     document.body.dir = i18n.dir();
     
         dispatch(fetchSession());
+            dispatch(fetchPartners());
 
   };
 
@@ -40,6 +43,10 @@ export default function NavbarCom() {
       setScrolled(false); // Remove class when not scrolled
     }
   };
+   const handelToggle = () => {
+    console.log(ToggleNav);
+     setToggleNav(false);
+   };
 
   const handelLogout = () => {
      dispatch(Logout());   
@@ -64,29 +71,61 @@ export default function NavbarCom() {
       <div className="container">
         <Navbar.Brand href="/" className="logo">
           <img src={logoColor}></img>
+          {ToggleNav}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setToggleNav(!ToggleNav)}
+        />
+
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className={`navbar-collapse collapse ${ToggleNav ? "" : "hide"}`}
+        >
           <Nav>
-            <a className="active nav-link link-page" href="/#header">
+            <a
+              onClick={() => handelToggle(false)}
+              className="active nav-link link-page"
+              href="/#header"
+            >
               {t("Home")}
             </a>
-            <a className="nav-link link-page" href="/#about-us">
+            <a
+              className="nav-link link-page"
+              href="/#Prince"
+              onClick={() => setToggleNav(false)}
+            >
               {t("about")}
             </a>
-            <a className="nav-link link-page" href="/#Objectives">
+            <a
+              className="nav-link link-page"
+              href="/#Objectives"
+              onClick={() => setToggleNav(false)}
+            >
               {t("objectives")}
             </a>
-            <a className="nav-link link-page" href="/#discussion-sessions">
+            <a
+              className="nav-link link-page"
+              href="/#discussion-sessions"
+              onClick={() => setToggleNav(false)}
+            >
               {t("DiscussionSessions")}
             </a>
-            <a className="nav-link link-page" href="/#activities">
+            <a
+              className="nav-link link-page"
+              href="/#activities"
+              onClick={() => setToggleNav(false)}
+            >
               {t("activities")}
             </a>
             {/* <a className="nav-link link-page" href="/#Speakers">
               {t("speacker")}
             </a> */}
-            <a className="nav-link link-page" href="/#Supporters">
+            <a
+              className="nav-link link-page"
+              href="/#Supporters"
+              onClick={() => setToggleNav(false)}
+            >
               {t("Supporters")}
             </a>
             {/* <NavDropdown
@@ -123,16 +162,24 @@ export default function NavbarCom() {
                   <span>
                     {" "}
                     <img src={avatar} className="avatar" />
-                    <span>مرحبا , {userInfo.name}</span>
+                    <span> {t("welcome")} , {userInfo.name}</span>
                   </span>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <NavLink to="/" onClick={()=>{handelLogout()}}>تسجيل الخروج</NavLink>
+                  <NavLink
+                    to="/"
+                    onClick={() => {
+                      handelLogout();
+                    }}
+                  >
+                      {t("logout")}
+                  </NavLink>
                 </Dropdown.Menu>
               </Dropdown>
             ) : (
-              <NavLink className="nav-link  login" to="/login">
+              <NavLink className="nav-link  login" to="/login" onClick={() => setToggleNav(false)} >
+
                 {t("login")}
               </NavLink>
             )}

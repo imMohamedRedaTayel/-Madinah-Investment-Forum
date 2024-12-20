@@ -1,4 +1,4 @@
-import about1 from "../../../../assets/images/about-us.svg";
+import about1 from "../../../../assets/images/about2.png";
 import "./style.scss";
 import Word from "../../methode/index";
 

@@ -10,11 +10,11 @@ import { useTranslation } from "react-i18next";
 export default function Timeline() {
   const { t } = useTranslation();
   const [ShowTime, setShowTime] = useState(1);
-    useEffect(() => {
-      AOS.init({
-        duration: 1200, 
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   const TimeLines = [
     {
       date: "TimeLineText4",
@@ -44,27 +44,35 @@ export default function Timeline() {
       date: "TimeLineText9",
       list: [
         {
-          title: "ActivitiesText7",
+          title: "ActivitiesTexts3",
           date: `10:00 ${t("Am")} -  4:00 ${t("Pm")}`,
         },
         {
-          title: "TimeLineText6",
-          date: `10:00 ${t("Am")} -  4:00 ${t("Pm")}`,
+          title: "ActivitiesTexts1",
+          date: `10:00 ${t("Am")}`,
+        },
+        {
+          title: "ActivitiesTexts2",
+          date: `11:00 ${t("Am")}`,
+        },
+        {
+          title: "ActivitiesTexts4",
+          date: `12:40 ${t("Pm")}`,
         },
         {
           title: "TimeLineText10",
-          date: `01:00 ${t("Pm")}`,
+          date: `13:00 ${t("Pm")}`,
         },
         {
           title: "TimeLineText11",
-          date: `02:00 ${t("Pm")}`,
+          date: `14:00 ${t("Pm")}`,
         },
         {
           title: "TimeLineText12",
-          date: `03:00 ${t("Pm")}`,
+          date: `15:00 ${t("Pm")}`,
         },
       ],
-      DatesLine: ["10:00", "13:00​", "14:00", "15:00","16:00"],
+      DatesLine: ["10:00", "11:00", "12:40", "13:00​", "14:00", "15:00"],
       imgArrow: arrowGoRight,
     },
   ];

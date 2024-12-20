@@ -207,6 +207,14 @@ nav {
     .logo img {
           animation: none;
     }
+    .collapse:not(.show){
+      
+      display: block;
+    }
+    
+    .hide {
+      display: none !important;
+    }
   }
 
     #dropdown-basic{

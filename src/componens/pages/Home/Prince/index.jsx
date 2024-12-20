@@ -15,7 +15,7 @@ export default function Prince() {
   }, []);
 
   return (
-    <div className="Prince">
+    <div className="Prince" id="Prince">
       <div className="">
         <div className="row bg-yyy">
           {/* Left Image Section */}
@@ -35,11 +35,7 @@ export default function Prince() {
                 <Word v="PrinceText1" />
               </h2>
               <hr data-aos="zoom-in" data-aos-delay="600" />
-              <p
-                className="about-text"
-                data-aos="fade-up"
-                data-aos-delay="800"
-              >
+              <p className="about-text" data-aos="fade-up" data-aos-delay="800">
                 <Word v="PrinceText2" />
               </p>
             </div>

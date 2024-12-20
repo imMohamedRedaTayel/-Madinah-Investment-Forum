@@ -53,7 +53,7 @@ export default function Footer() {
             <p className="right-text">
               <Word v="FooterText7" />
             </p>
-            <ul>
+            {/* <ul>
               <li>
                 <img src={soc1} />
               </li>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <img src={soc4} />
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

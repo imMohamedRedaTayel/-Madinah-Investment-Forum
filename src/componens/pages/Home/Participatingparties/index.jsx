@@ -73,8 +73,8 @@ export default function Supporters() {
         </h5>
         <div className="list-sec row">
           {Partners[2]
-            ? Partners[2].partners.map((Part) => (
-                <div className="col-md-2" key={Part}>
+            ? Partners[2].partners.map((Part , index ) => (
+                <div className="col-md-2" key={index}>
                   <div className="content">
                     <img src={Part.image} />
                   </div>

@@ -18,7 +18,6 @@ export default function NavbarCom() {
   const dispatch = useDispatch();
    const userInfo = useSelector((state) => state.UserInfo);
    const location = useLocation();
-   console.log("location", location.pathname);
   const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -44,7 +43,6 @@ export default function NavbarCom() {
     }
   };
    const handelToggle = () => {
-    console.log(ToggleNav);
      setToggleNav(false);
    };
 
@@ -53,7 +51,6 @@ export default function NavbarCom() {
   };
   useEffect(() => {
     dispatch(getUser());
-    console.log("userInfo", userInfo);
     // Add event listener on mount
     window.addEventListener("scroll", handleScroll);
     return () => {

@@ -8,7 +8,6 @@ const Word = ({ v }) => {
   const translatedWord = translate(v);
 
   // Optional: Log the translation process for debugging
-  console.log(`Translating: ${v}, Result: ${translatedWord}`);
   
   return (
     <>

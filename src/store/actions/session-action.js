@@ -22,7 +22,6 @@ export const fetchSession =  () => {
           },
         }
       );
-      console.log("res", res.data.data.data);
          dispatch(getSession(res.data.data.data));
     } catch (error) {
       // Handle errors gracefully
@@ -61,7 +60,7 @@ export const subscribe = (id) => {
             Authorization: `Bearer ${token}`,
             lang: langu,
           },
-        }
+        }        
       );
       if(res.status == 200){
           Swal.fire({

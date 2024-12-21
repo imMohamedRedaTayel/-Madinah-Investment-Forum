@@ -94,7 +94,7 @@ export default function Activities() {
           {listMain.map((item, index) => (
             <div
               className="col-md-3"
-              key={item.imaf_url}
+              key={index}
               data-aos="fade-up"
               data-aos-delay={index * 200} // Stagger the animation delay
             >
@@ -116,7 +116,7 @@ export default function Activities() {
           {listsub.map((item, index) => (
             <div
               className="col-md-3"
-              key={item.imaf_url}
+              key={index}
               data-aos="fade-up"
               data-aos-delay={index * 200} // Stagger the animation delay
             >

@@ -56,7 +56,6 @@ export default function RegisterCon() {
   //handleCheckboxClick
   const handleCheckboxClick = () => {
     const isChecked = checkboxRef.current.checked;
-    console.log("Checkbox value:", isChecked);
   };
 
   const handelPass = () => {

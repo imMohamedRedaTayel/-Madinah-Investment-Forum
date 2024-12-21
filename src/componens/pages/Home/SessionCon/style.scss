@@ -1,25 +1,110 @@
+// .SessionCon {
+//   text-align: center;
+//   margin: 100px 0px;
+//   h5 {
+//     color: #5e7f4c;
+//   }
+//   h2 {
+//     color: black;
+//   }
+//   .row {
+//     padding: 0px;
+//     margin: 0px;
+//     > div {
+//         transition: all 1s ease-out;
+//       padding: 0px;
+//       margin: 0px;
+//       .content {
+//         background-size: cover;
+//         width: 100%;
+//         height: 100vh;
+//         margin: auto;
+//         margin-top: 50px;
+//         .shap {
+//           width: 100%;
+//           z-index: 99;
+//           height: 100%;
+//           background: #00000087;
+//           color: white;
+//           padding: 30px 10px 20px;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: space-between;
+//           text-align: start;
+//           .info {
+//             h5 {
+//               color: white;
+//             }
+//             img {
+//               width: 72px;
+//               height: 72px;
+//             }
+//           }
+//             p {
+//               color: white;
+//               font-size: 23px;
+//             }
+//         }
+//       }
+
+//     }
+//     > div:nth-child(1) .content {
+//         background: url("../../../../assets/images/sec1.jfif") left top no-repeat
+//           fixed;
+//     }
+//     > div:nth-child(2) .content {
+//         background: url("../../../../assets/images/sec2.jfif") top left fixed
+//           no-repeat;
+//     }
+//     > div:nth-child(3) .content {
+//         background: url("../../../../assets/images/sec3.jfif") top left fixed
+//           no-repeat;
+//     }
+//     > div:nth-child(4) .content {
+//         background: url("../../../../assets/images/sec4.jfif") top left fixed
+//           no-repeat;
+//     }
+    
+//        &:hover{
+//              >div{
+//                width: 18%;
+//              }
+//             >div:hover{
+//               width: 46%;
+//              }
+//         }
+//   }
+// }
+
 .SessionCon {
   text-align: center;
   margin: 100px 0px;
+
   h5 {
     color: #5e7f4c;
   }
+
   h2 {
     color: black;
   }
+
   .row {
-    padding: 0px;
-    margin: 0px;
+    display: flex;
+    flex-wrap: nowrap; /* لمنع العناصر من النزول */
+    // gap: 10px; /* لتوفير مسافة بين العناصر */
+    padding: 0;
+    margin: 0;
+
     > div {
-        transition: all 1s ease-out;
-      padding: 0px;
-      margin: 0px;
+      flex: 1 1 auto; /* السماح للعناصر بالتكيف مع المساحة */
+      transition: all 1s ease-out;
+
       .content {
         background-size: cover;
-        width: 100%;
+        // height: 400px; /* يمكنك ضبط الارتفاع هنا */
         height: 100vh;
-        margin: auto;
         margin-top: 50px;
+
         .shap {
           width: 100%;
           z-index: 99;
@@ -31,50 +116,55 @@
           flex-direction: column;
           justify-content: space-between;
           text-align: start;
+
           .info {
             h5 {
               color: white;
             }
+
             img {
               width: 72px;
               height: 72px;
             }
           }
-            p {
-              color: white;
-              font-size: 23px;
-            }
+
+          p {
+            color: white;
+            font-size: 23px;
+          }
         }
       }
-
     }
+
     > div:nth-child(1) .content {
-        background: url("../../../../assets/images/sec1.jfif") left top no-repeat
-          fixed;
+      background: url("../../../../assets/images/sec1.jfif") left top no-repeat
+        fixed;
     }
     > div:nth-child(2) .content {
-        background: url("../../../../assets/images/sec2.jfif") top left fixed
-          no-repeat;
+      background: url("../../../../assets/images/sec2.jfif") top left fixed
+        no-repeat;
     }
     > div:nth-child(3) .content {
-        background: url("../../../../assets/images/sec3.jfif") top left fixed
-          no-repeat;
+      background: url("../../../../assets/images/sec3.jfif") top left fixed
+        no-repeat;
     }
     > div:nth-child(4) .content {
-        background: url("../../../../assets/images/sec4.jfif") top left fixed
-          no-repeat;
+      background: url("../../../../assets/images/sec4.jfif") top left fixed
+        no-repeat;
     }
-    
-       &:hover{
-             >div{
-               width: 18%;
-             }
-            >div:hover{
-              width: 46%;
-             }
-        }
+
+    &:hover {
+      > div {
+        flex: 0.18; /* تصغير العناصر */
+      }
+
+      > div:hover {
+        flex: 0.46; /* تكبير العنصر عند التمرير */
+      }
+    }
   }
 }
+
 
 @keyframes moveUp {
   0% {

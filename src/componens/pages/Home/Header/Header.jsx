@@ -43,14 +43,13 @@ export default function Header() {
   const [fade, setFade] = useState(false);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-
-    AOS.refresh();
-  }, [currentIndex]);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //     once: true,
+  //   });
+  //   AOS.refresh();
+  // }, [currentIndex]);
 
   const handleListClick = (index) => {
     setFade(true);
@@ -91,7 +90,7 @@ export default function Header() {
         </div>
       </div>
 
-      <Swiper
+      {/* <Swiper
         modules={[Autoplay]}
         loop={true}
         autoplay={{
@@ -107,12 +106,12 @@ export default function Header() {
         slidesPerView={1}
         initialSlide={currentIndex}
       >
-        {/* {imageSet.map((item, index) => (
+        {imageSet.map((item, index) => (
           <SwiperSlide key={index}>
             <div> <h2 className="bg-danger" > {item.text} </h2> </div>
           </SwiperSlide>
-        ))} */}
-      </Swiper>
+        ))}
+      </Swiper> */}
     </>
   );
 }

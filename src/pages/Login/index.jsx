@@ -6,6 +6,7 @@ import './style.scss'
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 export default function Login() {
+  
     const { t } = useTranslation();
   const navigator = useNavigate();
   useEffect(() => {

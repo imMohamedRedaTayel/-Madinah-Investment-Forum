@@ -21,8 +21,8 @@ export default function Supporters() {
               </h5>
               <div className="list">
                 <div className="content">
-                  {Partners[9].partners.map((Part) => (
-                    <img src={Part.image} key={Part} />
+                  {Partners[9].partners.map((Part , index ) => (
+                    <img src={Part.image} key={index} />
                   ))}
                 </div>
               </div>
@@ -39,8 +39,8 @@ export default function Supporters() {
               </h5>
               <div className="list">
                 <div className="content">
-                  {Partners[10].partners.map((Part) => (
-                    <img src={Part.image} key={Part} />
+                  {Partners[10].partners.map((Part , index ) => (
+                    <img src={Part.image} key={index} />
                   ))}
                 </div>
               </div>
@@ -60,8 +60,8 @@ export default function Supporters() {
               <span></span>
             </h5>
             <div className="list">
-              {Partners[1].partners.map((Part) => (
-                <div className="content" key={Part}>
+              {Partners[1].partners.map((Part , index ) => (
+                <div className="content" key={index}>
                   <img src={Part.image} />
                 </div>
               ))}
@@ -78,8 +78,8 @@ export default function Supporters() {
                 <span></span>
               </h5>
               <div className="list">
-                {Partners[3].partners.map((Part) => (
-                  <div className="content" key={Part}>
+                {Partners[3].partners.map((Part , index ) => (
+                  <div className="content" key={index}>
                     <img src={Part.image} />
                   </div>
                 ))}
@@ -97,8 +97,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[4].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[4].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -115,8 +115,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[5].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[5].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -133,8 +133,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[6].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[6].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -151,8 +151,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[8].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[8].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -169,8 +169,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[7].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[7].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -187,8 +187,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[11].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[11].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}
@@ -205,8 +205,8 @@ export default function Supporters() {
                     <span></span>
                   </h5>
                   <div className="list">
-                    {Partners[12].partners.map((Part) => (
-                      <div className="content" key={Part}>
+                    {Partners[12].partners.map((Part , index ) => (
+                      <div className="content" key={index}>
                         <img src={Part.image} />
                       </div>
                     ))}

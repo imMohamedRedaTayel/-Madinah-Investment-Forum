@@ -94,7 +94,7 @@ export default function Timeline() {
         {TimeLines.map((item, index) => (
           <div
             className={`TimeLineSec ${ShowTime != index ? "show" : ""}`}
-            key={item}
+            key={index}
           >
             <div className="content container">
               {" "}
@@ -105,8 +105,8 @@ export default function Timeline() {
               <h2>{t(item.date)}</h2>
               <hr />
               <ul>
-                {item.list.map((ListItem) => (
-                  <li key={ListItem}>
+                {item.list.map((ListItem , index ) => (
+                  <li key={index}>
                     <div className="content">
                       <p>{t(ListItem.title)} </p>
                       <div className="date">{t(ListItem.date)}</div>
@@ -115,8 +115,8 @@ export default function Timeline() {
                 ))}
               </ul>
               <ul className="dates-line">
-                {item.DatesLine.map((ListItem) => (
-                  <li key={ListItem}>{ListItem}</li>
+                {item.DatesLine.map((ListItem , index ) => (
+                  <li key={index}>{ListItem}</li>
                 ))}
               </ul>
               <img

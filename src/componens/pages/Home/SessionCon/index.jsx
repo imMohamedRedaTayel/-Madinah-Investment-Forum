@@ -28,8 +28,8 @@ export default function SessionCon() {
         </p>
       </div>
       <div className="list row">
-        {Sessions.map((session) => (
-          <div className="col-md-3" key={session}>
+        {Sessions.map((session , index ) => (
+          <div className="col-md-2" key={index}>
             <NavLink to={`/sessions`}>
               {" "}
               <div className="content ">
@@ -44,70 +44,6 @@ export default function SessionCon() {
             </NavLink>
           </div>
         ))}
-        {/* <div className="col-md-3">
-          <div className="content img1">
-            <NavLink to="/sessions">
-              {" "}
-              <div className="shap">
-                <div className="info">
-                  <h5>
-                    <Word v="SessionsText6" />{" "}
-                  </h5>
-                  <p>
-                    <Word v="SessionsText7" />{" "}
-                  </p>
-                </div>
-                <p>
-                  <Word v="SessionsText8" />{" "}
-                </p>
-              </div>
-            </NavLink>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="content img3">
-            <NavLink to="/sessions">
-              {" "}
-              <div className="shap">
-                <div className="info">
-                  <h5>
-                    <Word v="SessionsText9" />
-                  </h5>
-                  <p>
-                    <Word v="SessionsText10" />
-                  </p>
-                </div>
-                <p>
-                  {" "}
-                  <Word v="SessionsText11" />
-                </p>
-              </div>
-            </NavLink>
-          </div>
-        </div>
-        <div className="col-md-3">
-          <div className="content img4 ">
-            <NavLink to="/sessions">
-              {" "}
-              <div className="shap">
-                <div className="info">
-                  {" "}
-                  <h5>
-                    {" "}
-                    <Word v="SessionsText12" />
-                  </h5>
-                  <p>
-                    <Word v="SessionsText13" />
-                  </p>
-                </div>
-                <p>
-                  {" "}
-                  <Word v="SessionsText14" />{" "}
-                </p>
-              </div>
-            </NavLink>
-          </div>
-        </div> */}
       </div>
     </div>
   );

@@ -23,8 +23,8 @@ export default function SessionConsec() {
   return (
     <div className="SessionConsec" id="discussion-sessions">
       <div className="container">
-        {Sessions.map((session) => (
-          <section className=" row mb-5 " key={session}>
+        {Sessions.map((session , index ) => (
+          <section className=" row mb-5 " key={index}>
             <div className="col-md-4 image-sec">
               {" "}
               <div className="content img2">
@@ -40,16 +40,16 @@ export default function SessionConsec() {
             <div className="col-md-8 content-sec">
               <h3>{t("Topics")}</h3>
               <ul>
-                {session.items.map((item) => (
-                  <li key={item}>
+                {session.items.map((item , index ) => (
+                  <li key={index}>
                     <p>{item.title} </p>
                   </li>
                 ))}
               </ul>
               <h3>{t('speackers')}</h3>
               <div className="speackers_list row">
-                {session.speakers.map((speacker) => (
-                  <div className=" col-lg-4 col-md-4" key={speacker}>
+                {session.speakers.map((speacker , index ) => (
+                  <div className=" col-lg-4 col-md-4" key={index}>
                     <img src={speacker.image} />
                     <div className="text-content">
                       <h5>{speacker.title}</h5>

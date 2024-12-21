@@ -46,8 +46,8 @@ export default function Speakers() {
           تحفيز الاستثمارات وتطوير الاقتصاد المحلي.
         </p>
         <div className="list row">
-          {listMain.map((item) => (
-            <div className="col-md-3" key={item}>
+          {listMain.map((item , index ) => (
+            <div className="col-md-3" key={index}>
               <div className="content">
                 <img src={item.imaf_url} />
                 <div className="content-text">

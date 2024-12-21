@@ -13,7 +13,6 @@ return { type: GET_USERINFO, payload: List };
 };
 //Logout
 export const Logout = () => {
-  console.log("Logout");
 localStorage.removeItem('token');
 sessionStorage.removeItem("token");
 localStorage.removeItem("user_data");

@@ -21,7 +21,6 @@ export const fetchPartners = () => {
           },
         }
       );
-      console.log("Partners -============", res.data.data);
       dispatch(getPartners(res.data.data));
     } catch (error) {
       // Handle errors gracefully

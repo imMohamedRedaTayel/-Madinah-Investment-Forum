@@ -29,7 +29,7 @@ export default function SessionCon() {
       </div>
       <div className="list row">
         {Sessions.map((session , index ) => (
-          <div className="col-md-2" key={index}>
+          <div className="col-md-2 p-0 " key={index}>
             <NavLink to={`/sessions`}>
               {" "}
               <div className="content ">

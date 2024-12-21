@@ -7,6 +7,7 @@ import header2 from "../../../../assets/images/header2.svg";
 import header3 from "../../../../assets/images/header3.svg";
 import header4 from "../../../../assets/images/header4.svg";
 import { useTranslation } from "react-i18next";
+import "swiper/css";
 import "./style.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,25 +16,21 @@ const imageSet = [
   {
     image: header1,
     text: <Word v="hed1" />,
-    // title: <Word v="title1" />,
     description: <Word v="description1" />,
   },
   {
     image: header2,
     text: <Word v="hed2" />,
-    // title: <Word v="title2" />,
     description: <Word v="description2" />,
   },
   {
     image: header3,
     text: <Word v="hed3" />,
-    // title: <Word v="title3" />,
     description: <Word v="description3" />,
   },
   {
     image: header4,
     text: <Word v="hed4" />,
-    // title: <Word v="title4" />,
     description: <Word v="description4" />,
   },
 ];
@@ -43,17 +40,18 @@ export default function Header() {
   const [fade, setFade] = useState(false);
   const { t } = useTranslation();
 
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     once: true,
-  //   });
-  //   AOS.refresh();
-  // }, [currentIndex]);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, [currentIndex]);
 
   const handleListClick = (index) => {
     setFade(true);
     setCurrentIndex(index);
+    setTimeout(() => setFade(false), 800); // تأثير الانتقال
   };
 
   return (
@@ -65,7 +63,7 @@ export default function Header() {
         <div className="overlay">
           <div className={`content ${fade ? "fade" : ""}`} data-aos="fade-up">
             <h3 className="featured-label" data-aos="fade-up">
-              {imageSet[currentIndex].title}
+              {imageSet[currentIndex].text}
             </h3>
             <h1 className="title" data-aos="fade-up">
               {imageSet[currentIndex].description}
@@ -90,7 +88,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* <Swiper
+      <Swiper
         modules={[Autoplay]}
         loop={true}
         autoplay={{
@@ -101,17 +99,19 @@ export default function Header() {
         onSlideChange={(swiper) => {
           setCurrentIndex(swiper.realIndex);
           setFade(true);
-          setTimeout(() => setFade(false), 3800);
+          // setTimeout(() => setFade(false), 800); // تأثير الانتقال
         }}
         slidesPerView={1}
         initialSlide={currentIndex}
       >
         {imageSet.map((item, index) => (
           <SwiperSlide key={index}>
-            <div> <h2 className="bg-danger" > {item.text} </h2> </div>
+            <div>
+              {/* <h2 className="bg-danger">{item.text}</h2> */}
+            </div>
           </SwiperSlide>
         ))}
-      </Swiper> */}
+      </Swiper>
     </>
   );
 }

@@ -152,6 +152,10 @@
       background: url("../../../../assets/images/sec4.jfif") top left fixed
         no-repeat;
     }
+    > div:nth-child(5) .content {
+      background: url("../../../../assets/images/sec5.png") left top no-repeat
+        fixed;
+    }
 
     &:hover {
       > div {
